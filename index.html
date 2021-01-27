@@ -29,11 +29,9 @@
       </div>
       <!-- /next selector-->
       <!-- nav links -->
-      <div class="nav" >
-        <i class="fas fa-circle active first"></i>
-        <i class="fas fa-circle"></i>
-        <i class="fas fa-circle"></i>
-        <i class="fas fa-circle last"></i>
+      <div class="nav">
+        <i v-for="(el, i) in imgs" class="fas fa-circle"
+        :class="{active: doActive(i)}" @click="showImg(i)"></i>
       </div>
       <!-- /nav links -->
     </div>
@@ -41,6 +39,6 @@
   </div>
 
   <script src="js/script.js"></script>
-  
+
 </body>
 </html>
