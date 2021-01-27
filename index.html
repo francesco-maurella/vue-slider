@@ -30,8 +30,9 @@
       <!-- /next selector-->
       <!-- nav links -->
       <div class="nav">
-        <i v-for="(el, i) in imgs" class="fas fa-circle"
-        :class="{active: doActive(i)}" @click="showImg(i)"></i>
+        <i v-for="(el, i) in imgs"
+        :class="`fas fa-circle ${doActive(i)}`" @click="showImg(i)">
+        </i>
       </div>
       <!-- /nav links -->
     </div>

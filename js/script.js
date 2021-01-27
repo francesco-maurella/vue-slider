@@ -10,7 +10,6 @@ new Vue ({
       '03.jpg',
       '04.jpg'
     ],
-    show : 'active', // show, richiama classe active
     imgIndex : 0 // indexOf di una img (parte dalla prima)
   },
 
@@ -20,21 +19,21 @@ new Vue ({
       const limit = this.imgs.length - 1; // ultimo indexOf possibile di una img
       if (this.imgIndex === limit) { // se l'indexOf(img) è uguale a limit
         this.imgIndex = 0; // l'indexOf(img) torna alla prima ( = 0)
-      } else { // oppure
+      } else {
         this.imgIndex++; // aumenta di un numero
       }
     },
     prev : function(){ // Immagine Precedente
-      const limit = this.imgs.length - 1; // ultimo indexOf possibile di una img
+      const limit = this.imgs.length - 1;
       if (this.imgIndex === 0) { // se l'indexOf(img) è il primo ( = 0)
         this.imgIndex = limit; // l'indexOf(img) diventa uguale al limit
-      } else { // oppure
+      } else {
         this.imgIndex--; // decrementa di un numero
       }
     },
     doActive : function(index){ // Rendi Attiva
-      if (index === this.imgIndex) { // se questo index è uguale all'indexOf(img)
-        return this.show; // ritorna il valore dell'oggetto show
+      if (index === this.imgIndex) { // se index è uguale a indexOf(img)
+        return 'active'; // ritorna la stringa inerente alla classe active
       }
     },
     showImg : function(index){ // Mostra Immagine
