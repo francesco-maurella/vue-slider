@@ -10,29 +10,26 @@
 </head>
 <body>
 
-  <div class="container">
+  <div id="app" class="container">
     <!-- Slider -->
     <div class="slider-wrapper">
       <!-- prev selector-->
       <div class="prev">
-        <i class="fas fa-angle-left"></i>
+        <i @click="prev" class="fas fa-angle-left"></i>
       </div>
       <!-- /prev selector-->
       <!-- gallery -->
       <div class="images">
-        <img class="active first" src="img/01.jpg" alt="Image">
-        <img src="img/02.jpg" alt="Image">
-        <img src="img/03.jpg" alt="Image">
-        <img class="last" src="img/04.jpg" alt="Image">
+        <img :src="`img/${imgs[imgIndex]}`" class="active" alt="Image">
         <!-- /gallery -->
       </div>
       <!-- next selector-->
       <div class="next">
-        <i class="fas fa-angle-right"></i>
+        <i @click="next" class="fas fa-angle-right"></i>
       </div>
       <!-- /next selector-->
       <!-- nav links -->
-      <div class="nav">
+      <div class="nav" >
         <i class="fas fa-circle active first"></i>
         <i class="fas fa-circle"></i>
         <i class="fas fa-circle"></i>
@@ -44,5 +41,6 @@
   </div>
 
   <script src="js/script.js"></script>
+  
 </body>
 </html>
