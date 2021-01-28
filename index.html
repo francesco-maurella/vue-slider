@@ -30,9 +30,19 @@
       <!-- /next selector-->
       <!-- nav links -->
       <div class="nav">
+
         <i v-for="(el, i) in imgs"
-        :class="`fas fa-circle ${doActive(i)}`" @click="showImg(i)">
-        </i>
+        class="fas fa-circle" :class="doActive(i)"
+        @click="showImg(i)"></i>
+
+        <!-- Non Funziona
+
+        <i v-for="(el, i) in imgs"
+        :class="'fas fa-circle ' + doActive(i)"
+        @click="showImg(i)"></i>
+
+       -->
+
       </div>
       <!-- /nav links -->
     </div>

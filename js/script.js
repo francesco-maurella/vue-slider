@@ -31,10 +31,8 @@ new Vue ({
         this.imgIndex--; // decrementa di un numero
       }
     },
-    doActive : function(index){ // Rendi Attiva
-      if (index === this.imgIndex) { // se index è uguale a indexOf(img)
-        return 'active'; // ritorna la stringa inerente alla classe active
-      }
+    doActive : function(i){ // Rendi Attiva
+      return  {'active' : i === this.imgIndex};
     },
     showImg : function(index){ // Mostra Immagine
       this.imgIndex = index;
